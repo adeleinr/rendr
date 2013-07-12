@@ -134,6 +134,13 @@ module.exports = BaseView = Backbone.View.extend({
   getTemplate: function() {
     return this.app.templateAdapter.getTemplate(this.getTemplateName());
   },
+  
+    /*
+  * Get partials template function
+  */
+  getPartialTemplate: function(name) {
+    return templateFinder.getPartialTemplate(name);
+  },
 
   /**
    * Any options not to create data-attributes for.
